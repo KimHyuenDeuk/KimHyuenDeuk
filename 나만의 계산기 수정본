@@ -1,0 +1,35 @@
+fun main(){
+    var cacl2 = cacl()
+
+    println("숫자를 입력")
+    var num1 = readLine()!!.toDouble()
+
+    println("연산자(+,-,*,/")
+    var operator = readLine()!!.toString()
+
+    println("숫자를 입력")
+    var num2 = readLine()!!.toDouble()
+
+    if(operator == "+"){
+        println(cacl2.addOperation (AddOperation(),num1,num2))
+    }
+    else if(operator == "-"){
+    println(cacl2.minusoper (minus(),num1,num2))
+    }
+    else if(operator == "*" ) {
+        println(cacl2.multipleoper(mulitiple(), num1, num2))
+    }
+    else if(operator == "/"){
+        println(cacl2.divoper(div(),num1,num2))
+    }
+}
+
+class cacl(){
+    fun addOperation(add: AddOperarion,num1: Double, num2 :Double) :Double{
+        return add.operate(num1,num2)
+    }
+    fun minusoper(min: mins,num1: Double, num2 :Double) :Double{
+        return min.operate(num1,num2)
+    }
+    fun multipleoper(multi: multiple,num1: Double, num2 :Double) :Double{
+        return multi.operate(num1,num2)
