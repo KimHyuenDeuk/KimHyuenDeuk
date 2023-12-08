@@ -1,0 +1,20 @@
+fun main() {
+    var num1 = readln()!!.toDouble()
+    var operator = readln()!!.toString()
+    var num2 = readln()!!.toDouble()
+
+    if (operator == "+") {
+        println("${num1 + num2}")
+    } else if (operator == "-") {
+        println("${num1 - num2}")
+    } else if (operator == "*") {
+        println("${num1 * num2}")
+    } else if (operator == "/") {
+        println("${num1 / num2}")
+    } else if (operator == "%") {
+        println("${num1 % num2}")
+    } else {
+        println("잘못된 연산자입니다")
+    }
+
+}
